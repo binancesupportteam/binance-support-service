@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binance Support Services</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Binance Support Services</h1>
+    <p>Your trusted crypto support team.</p>
+    <a href="#contact" class="btn">Get Support</a>
+  </header>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <h3>Wallet Recovery</h3>
+        <p>We assist in recovering lost access to your Binance wallet securely and quickly.</p>
+      </div>
+      <div class="service">
+        <h3>Transaction Assistance</h3>
+        <p>Help with stuck or failed Binance transactions. We ensure your funds are safe.</p>
+      </div>
+      <div class="service">
+        <h3>Scam Protection</h3>
+        <p>Stay safe from scams. We educate and assist with protecting your assets.</p>
+      </div>
+      <div class="service">
+        <h3>Technical Support</h3>
+        <p>From 2FA issues to account problems, we provide expert Binance support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="price-chart">
+    <h2>Crypto Price Chart</h2>
+    <canvas id="cryptoChart"></canvas>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How do I recover my Binance wallet?</h3>
+      <p>Contact our support team. We guide you step-by-step to recover your wallet securely.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you help with scam cases?</h3>
+      <p>Yes, we assist in identifying scams and helping you take appropriate steps to protect your assets.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this an official Binance service?</h3>
+      <p>No, we are an independent support service dedicated to helping Binance users.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>“Binance Support Services saved me from losing my funds. Highly recommended!”</p>
+    <p>“Amazing customer service, fast and reliable help with my account.”</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Binance Support Services | Follow us on
+      <a href="#">Twitter</a> | <a href="#">Telegram</a>
+    </p>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('cryptoChart').getContext('2d');
+    const cryptoChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        datasets: [{
+          label: 'BTC Price (USD)',
+          data: [42000, 42500, 43000, 43500, 44000, 44500, 45000],
+          borderColor: '#f0b90b',
+          backgroundColor: 'rgba(240, 185, 11, 0.2)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
